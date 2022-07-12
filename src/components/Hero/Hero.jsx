@@ -32,9 +32,9 @@ const Hero = () => {
                 </div>
 
                 <div className="figure">
-                    <div><span>+140</span><span>EXPERT COACHES</span></div>
-                    <div><span>+978</span><span>MEMBERS JOINED</span></div>
-                    <div><span>+50</span><span>FITNESS PROGRAMS</span></div>
+                    <div><span>+ 140</span><span>EXPERT COACHES</span></div>
+                    <div><span>+ 978</span><span>MEMBERS JOINED</span></div>
+                    <div><span>+ 50</span><span>FITNESS PROGRAMS</span></div>
                 </div>
 
                 <div className="hero-buttons">
@@ -43,6 +43,24 @@ const Hero = () => {
                 </div>
             </div>
             <div className="right-h">
+                <button className='btn'>Join Now</button>
+
+                <div className="heart-rate">
+                    <img src={heart} alt="heart" />
+                    <span>Heart Rate</span>
+                    <span>116 pm</span>
+                </div>
+
+                <img src={heroImage} alt="hero image" className='hero-image'/>
+                <img src={heroImageBack} alt="hero image back" className='hero-image-back'/>
+
+                <div className='calories'>
+                    <img src={calories} alt=""/>
+                    <div>
+                        <span>Calories Burned</span>
+                        <span>220 kcal</span>
+                    </div>
+                </div>
             </div>
         </div>
     );
