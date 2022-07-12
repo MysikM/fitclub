@@ -4,21 +4,22 @@ import heroImage from '../../assets/hero_image.png';
 import heroImageBack from '../../assets/hero_image_back.png';
 import heart from '../../assets/heart.png';
 import calories from '../../assets/calories.png';
-
+import NumberCounter from "number-counter";
 import {motion} from 'framer-motion';
 
 
 const Hero = () => {
     const transition = {type: 'spring', duration: 3};
+    const mobile = window.innerWidth <= 768 ? true : false;
     return (
-        <div className="hero">
+        <div className="hero" id='home'>
             <div className="blur hero-blur"/>
             <div className="left-h">
                 <Header />
 
                 <div className="the-best-ad">
                     <motion.div
-                        initial={{left: '238px'}}
+                        initial={{left: mobile ? '165px' : '238px'}}
                         whileInView={{left: '9px'}}
                         transition={{...transition, type: 'tween'}}
                     />
@@ -41,9 +42,24 @@ const Hero = () => {
                 </div>
 
                 <div className="figure">
-                    <div><span>+ 140</span><span>EXPERT COACHES</span></div>
-                    <div><span>+ 978</span><span>MEMBERS JOINED</span></div>
-                    <div><span>+ 50</span><span>FITNESS PROGRAMS</span></div>
+                    <div>
+                        <span>
+                            <NumberCounter end={140} start={75} delay='4' preFix='+ '/>
+                        </span>
+                        <span>EXPERT COACHES</span>
+                    </div>
+                    <div>
+                        <span>
+                             <NumberCounter end={978} start={800} delay='4' preFix='+ '/>
+                        </span
+                        ><span>MEMBERS JOINED</span>
+                    </div>
+                    <div>
+                        <span>
+                            <NumberCounter end={50} start={0} delay='4' preFix='+ '/>
+                        </span>
+                        <span>FITNESS PROGRAMS</span>
+                    </div>
                 </div>
 
                 <div className="hero-buttons">
