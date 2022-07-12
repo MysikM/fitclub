@@ -44,3 +44,11 @@
   cursor: pointer;
 }
 
+.blur {
+  background: rgba(253,120,43,.69);
+  border-radius: 50%;
+  -webkit-filter: blur(150px);
+  filter: blur(150px);
+  position: absolute;
+  z-index: -9;
+}
